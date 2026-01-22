@@ -1,0 +1,124 @@
+html, body {
+    background: #202020 no-repeat fixed center;
+    background-size: cover;
+	height:100%;
+	width:100%;}
+* {
+	margin: 0;
+}
+
+#animated-bg {
+	background: url(../img/1.jpg) no-repeat center center;
+	transition: background 3s;
+	width: 100%;
+	height: 100%;
+}
+
+#animated-bg:before {
+	content:"";
+	position:absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #222040;
+	opacity:0.4;
+}
+
+#date {
+	position:fixed;
+	left:2%;
+	top:8px;
+	color: #FFFFFF;
+	opacity:0.7;
+	font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	text-shadow: rgba(0, 0, 0, 0.8) 0 0 0;
+	text-transform: uppercase;}
+
+#logo {
+	position: fixed;
+    left: 44%;
+    top: 38%;
+    height: 194px;
+    width: 621px;
+    background: url(../img/logo.png) no-repeat;
+}
+
+#topbar {
+	position:fixed;
+	left:0;
+	top:0;
+	height:51px;
+	width:100%;
+	opacity:0.5;
+    background: url(../img/topbar.png) repeat-x;
+}
+
+#circles {
+    position: fixed;
+    left: 47%;
+    margin-left: -35px;
+    bottom: 2%;
+    height: 15px;
+    width: 130px;
+}
+
+.circle
+{
+	background-color: #FFFFFF;float:left;height:15px;margin-left: 10px;width: 15px;opacity: 0.7;
+	animation-name: bounce_circle;
+	-webkit-animation-name: bounce_circle;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	animation-duration: 4s;
+	-webkit-animation-duration: 4s;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	animation-direction: initial;
+	-webkit-animation-direction: initial;
+
+	-moz-animation-name: bounce_circle;
+	-moz-border-radius: 10px;
+	-moz-animation-duration: 3s;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-direction: initial;
+}
+
+#circle_1, #circle_5
+{
+	animation-delay: .9s;
+	-webkit-animation-delay: .9s;
+	-moz-animation-delay: .9s;
+}
+
+#circle_2, #circle_4
+{
+	animation-delay: 6s;
+	-webkit-animation-delay: 6s;
+	-moz-animation-delay: 6s;
+}
+
+#circle_3
+{
+	animation-delay: 3s;
+	-webkit-animation-delay: 3s;
+	-moz-animation-delay: 3s;
+}
+
+/*  support  Chome, Safari etc.    */
+@keyframes bounce_circle {0%{opacity:0.2;}50%{opacity:1;}100%{opacity:0.5;}}
+@-webkit-keyframes bounce_circle {0%{opacity:0.2;}50%{opacity:1;}100%{opacity:0.5;}}
+@keyframes load {0%{width: 0;background-position:0 0;} 100%{width:100%;background-position:-40px 0;}}
+@-webkit-keyframes load {0%{width: 0;background-position:0 0;} 100%{width:100%;background-position:-40px 0;}}
+/*  support  Mozilla Firefox    */
+@-moz-keyframes bounce_circle{0%{opacity:0.2;}50%{opacity:1;}100%{opacity:0.5;}}
+@-moz-keyframes load {0%{width:0;background-position:0 0;} 100%{width:100%;background-position:-40px 0;}}
+
+#botbar {
+	position:fixed;
+	left:0;
+	bottom:0;
+	height:51px;
+	width:100%;
+	opacity:0.5;
+    background: url(../img/botbar.png) repeat-x;
+}
