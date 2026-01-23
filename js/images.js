@@ -5,7 +5,7 @@ function loading_images() {
 		secs = 4;
 	bgImageArray.forEach(function (img) {
 		new Image().src = base + img;
-		// caches images, avoiding white flash between background replacements
+
 	});
 
 	function backgroundSequence() {

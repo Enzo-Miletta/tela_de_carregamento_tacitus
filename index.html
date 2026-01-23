@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Tela de Carregamento</title>
+	<link rel="icon" type="image/png" href="img/logo.png">
 	<link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
 	<script type="text/javascript" src="js/date.js"></script>
 	<script type="text/javascript" src="js/images.js"></script>
 	<script>
+
 		function playAudio() {
 			var audio = document.getElementById('background-music');
 			if (audio) {
-				audio.volume = 0.5;
+				audio.volume = 0.15;
 				audio.play().catch(function () {
-					// Se falhar, tenta novamente no primeiro clique
+
 					document.body.addEventListener('click', function () {
 						audio.play();
 					}, { once: true });
@@ -20,10 +24,10 @@
 			}
 		}
 
-		// Tenta tocar quando a página carregar
+
 		window.addEventListener('load', playAudio);
 
-		// Tenta tocar também no DOMContentLoaded
+
 		document.addEventListener('DOMContentLoaded', playAudio);
 	</script>
 </head>
